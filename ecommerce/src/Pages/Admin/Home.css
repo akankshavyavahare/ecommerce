@@ -1,0 +1,57 @@
+.block-1 {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220522/pngtree-ecommerce-banner-planning-segmentation-selection-image_1375247.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.header {
+    color: white;
+}
+
+.para1 {
+    margin: 10% 60% 0px 10%;
+}
+
+.button {
+    padding: 60px 0;
+    margin: 0 25%;
+}
+
+/*main */
+.main {
+    margin-bottom: -16px;
+    background-size: 100%;
+}
+
+.main-1 {
+    display: flex;
+}
+.para-main {
+    margin: 10px 50px 20px 10px
+}
+.about-value {
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.mission {
+    background-color: #7049dd;
+    margin-left: 10px;
+    padding:30px;
+    height: 450px;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.vision-img {
+    background-image: url('https://www.voltas.in/images/_ansel_image_collector/About_Overview_Card_Vision.jpg');
+    background-size: 100% 100%;
+    width:40%;
+    margin: 0 0 20px 40px;
+}
+
+/*Services*/
+.services {
+    background-color: #6c757d17;
+}
