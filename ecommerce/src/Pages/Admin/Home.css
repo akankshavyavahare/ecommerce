@@ -5,6 +5,7 @@
 }
 
 .header {
+    padding: 20px;
     color: white;
 }
 
@@ -21,14 +22,18 @@
 .main {
     margin-bottom: -16px;
     background-size: 100%;
+   
 }
 
 .main-1 {
     display: flex;
+    
 }
 .para-main {
-    margin: 10px 50px 20px 10px
+    margin: 10px 50px 20px 10px;
+    padding: 10px 70px 10px 10px;
 }
+
 .about-value {
     display: flex;
     color: white;
@@ -37,18 +42,22 @@
 
 .mission {
     background-color: #7049dd;
-    margin-left: 10px;
+    margin-left: 5px;
     padding:30px;
-    height: 450px;
-    width: 30%;
+    height: 250px;
+    width: 40%;
     margin-bottom: 20px;
 }
 
 .vision-img {
+    margin-top:10px;
     background-image: url('https://www.voltas.in/images/_ansel_image_collector/About_Overview_Card_Vision.jpg');
-    background-size: 100% 100%;
+    background-size: 80% 95%;
+    background-repeat: no-repeat;
     width:40%;
-    margin: 0 0 20px 40px;
+    margin: 0 0 5px 20px;
+    padding: 20px;
+    color: darkmagenta;
 }
 
 /*Services*/

@@ -1,3 +1,3 @@
-import LAP from './lap.jpg';
-import HEADERIMAGE from './header.avif';
-export {LAP,HEADERIMAGE} 
+import ABOUT from './about.jpg'
+import LOGO from './logo.png'
+export {ABOUT,LOGO} 

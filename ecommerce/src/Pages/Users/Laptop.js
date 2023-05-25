@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Addcart from './Addcart';
 
 const Laptop = () => {
     const [islaptop, setIsLaptop] = useState([]);
@@ -25,7 +26,7 @@ const Laptop = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productDescription}</p>
-                                    <Link to="#" className="btn btn-primary">cart</Link>
+                                    <Addcart/>
                                 </div>
                             </div>
                         </div>

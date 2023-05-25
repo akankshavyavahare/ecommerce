@@ -11,17 +11,32 @@ import Laptop from './Pages/Users/Laptop';
 import Camera from './Pages/Users/Camera';
 import Tablet from './Pages/Users/Tablet';
 import Protected from './Pages/Protected/Protected';
-import { Component } from 'react';
+import { Component, createContext, useState } from 'react';
 import Addcart from './Pages/Users/Addcart';
+import Signup from './Pages/Signup/Signup';
+
+const Appcart = createContext(); //This is context api use to inherit properties from parent to n number of child
 function App() {
+const[cartvalues , setCartvalues] = useState(0);
+const[showmodalpop , setShowmodalpop] = useState(false)
+const increaseCart =()=>{
+  setCartvalues(cartvalues + 1)
+}
+const showmodalogin=()=>{
+  setShowmodalpop(
+          !showmodalpop
+  )
+}
   return (
+    <Appcart.Provider value={{cartvalues,showmodalpop, showmodalogin, increaseCart}}>  {/* then go to navbar .... 3rd step consumer */}
     <div>
 
       <BrowserRouter>
         <Navbar></Navbar>
         <Routes>
-        <Route path='/' element={<Login/>}> </Route>
-          <Route path='/home' element={<Protected Component={<Home/>}/>}></Route>
+        {/* <Route path='/' element={<Login/>}> </Route> */}
+        <Route path='/signup' element={<Signup/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
           <Route path='addproduct' element={<Protected Component={<AddProduct/>}/>}> </Route>
           <Route path='/allproduct' element={<Protected Component={<Allproduct/>}/>}></Route>
           <Route path='/mobile' element={<Protected Component={<Mobile/>}/>}></Route>
@@ -36,7 +51,9 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </Appcart.Provider>
   );
 }
 
 export default App;
+export{Appcart};

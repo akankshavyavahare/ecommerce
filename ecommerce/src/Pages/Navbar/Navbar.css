@@ -1,3 +1,13 @@
-.navbar.Link {
-    color:black;
+*::after{
+padding: 0;
+margin:0;
+box-sizing: border-box;
+}
+.nav1 {
+    background-color: #93429d91;
+    color: white;
+    display: flex;
+}
+Link:hover{
+    color: white;
 }

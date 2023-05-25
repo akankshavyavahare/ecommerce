@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Addcart from './Addcart';
 
 const Mobile = () => {
     const [ismobile, setIsMobile] = useState([]);
@@ -23,7 +24,7 @@ const Mobile = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productDescription}</p>
-                                    <Link to="#" className="btn btn-primary">cart</Link>
+                                    <Addcart/>
                                 </div>
                             </div>
                         </div>)

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Addcart from './Addcart';
 
 const Camera = () => {
     const [iscamera, setIsCamera] = useState([]);
@@ -12,6 +13,9 @@ const Camera = () => {
         }
         callCameraApi();
     }, [])
+    const deleteHandler=(item)=>{
+        console.log(item);
+    }
     return (
         <div className='container'>
             <div className='row'>
@@ -23,7 +27,8 @@ const Camera = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productImageUrl}</p>
-                                    <Link to="#" className="btn btn-primary">cart</Link>
+                                    <button type='delete' className='btn btn-danger' onClick={(e)=>deleteHandler(item)}> Delete </button>
+                                    <Addcart/>
                                 </div>
                             </div>
                         </div>
