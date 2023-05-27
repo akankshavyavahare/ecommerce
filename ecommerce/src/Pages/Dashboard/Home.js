@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCertificate, faHeart, faLeaf, faLock, faPowerOff, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faFacebookF, faFacebookSquare, faInstagramSquare, faLinkedin, faLinkedinIn, faSkype, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import React from 'react';
 import './Home.css';
-import { ABOUT, LAP } from '../images';
+import { ABOUT } from '../images';
 const Home = () => {
     return (
         <div>
@@ -19,7 +20,7 @@ const Home = () => {
             <section className='container-fluid main p-5'>
                 <div className='main-1'>
                     <div>
-                        <h2 className='text-center'>About Us</h2>
+                        <h2 className='text-center' id='about'>About Us</h2>
                         <h4 className='p-3'>Description</h4>
                         <p className='para-main'>Provider of a shopping platform for home appliances. The company offers an online marketplace which enables users to buy home appliances at competitive rates with free installation services.</p>
                         <button className="btn btn-primary">Get in Touch</button>
@@ -86,6 +87,73 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section>
+                <div class="container subscribe">
+                    <h2 className="sub-heading"> Subscribe To the Electronic Shop Fot Latest upload</h2>
+                    <div class="row">
+                        <div class="col-md-6 offset-3">
+                            <div class="well">
+                                <form>
+                                    <div class="input-group">
+                                        <input class="form-control" name="email" id="email" type="email" placeholder="Your Email" required></input>
+                                        <button class="btn btn-info btn-lg" type="submit">Subscribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div className='container-fluid footer p-5'>
+                    <div className='row'>
+                        <div className='col-3'>
+                            <ul className='list'>
+                                <h4> LOCATION </h4>
+                                <li> Mumbai </li>
+                                <li> Pune </li>
+                                <li> Ahemdabad </li>
+                                <li> INDIA </li>
+                                <li> Phone: +91 88882-45781 </li>
+                                <li> Email: electronicsholi@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div className='col-3'>
+                            <h4> USEFUL LINKS </h4>
+                            <ul className='links'>
+                                <li><a href='/'>HOME </a></li>
+                                <li><a href='#about'> About</a></li>
+                                <li><a href='#about'> About</a></li>
+                                <li><a href='#about'> Services</a></li>
+                                <li> <a href='#about'> Terms and condition</a></li>
+                                <li><a href='#about'> Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div className='col-3'>
+                            <h4> USEFUL LINKS </h4>
+                            <ul className='list'>
+                                <li>PS 5</li>
+                                <li> Computer</li>
+                                <li>Gaming Laptop</li>
+                                <li> Mobile Phone</li>
+                                <li>Camera </li>
+                                <li>Tablet</li>
+                            </ul>
+                        </div>
+                        <div className='col-3'>
+                            <h4> OUR SOCIAL NETWORKS </h4>
+                            <p>Follow us: </p>
+                            <ul className='list'>
+                                <span className='icons p-2'><FontAwesomeIcon icon={faFacebook} /></span>
+                                <span className='icons p-2'><FontAwesomeIcon icon={faInstagramSquare} /></span>
+                                <span className='icons p-2'><FontAwesomeIcon icon={faTwitterSquare} /></span>
+                                <span className='icons p-2'><FontAwesomeIcon icon={faLinkedin} /></span>
+                                <span className='icons p-2'><FontAwesomeIcon icon={faSkype} /></span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div >
     );
 };

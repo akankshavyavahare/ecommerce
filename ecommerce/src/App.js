@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // import Login from './Pages/Login/Login';
 import AddProduct from './Pages/Admin/AddProduct';
 import Allproduct from './Pages/Admin/AllProduct';
-import Home from './Pages/Admin/Home';
 import Mobile from './Pages/Users/Mobile';
 import Laptop from './Pages/Users/Laptop';
 import Camera from './Pages/Users/Camera';
@@ -14,6 +13,7 @@ import Protected from './Pages/Protected/Protected';
 import { Component, createContext, useState } from 'react';
 import Addcart from './Pages/Users/Addcart';
 import Signup from './Pages/Signup/Signup';
+import Home from './Pages/Dashboard/Home';
 
 const Appcart = createContext(); //This is context api use to inherit properties from parent to n number of child
 function App() {
