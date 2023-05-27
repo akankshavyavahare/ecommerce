@@ -1,3 +1,4 @@
 import ABOUT from './about.jpg'
 import LOGO from './logo.png'
-export {ABOUT,LOGO} 
+import LOGO1 from './logo1.png'
+export {ABOUT,LOGO,LOGO1} 

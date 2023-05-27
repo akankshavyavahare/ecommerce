@@ -34,29 +34,30 @@
     padding: 10px 70px 10px 10px;
 }
 
-.about-value {
+/* .about-value {
     display: flex;
     color: white;
     justify-content: center;
-}
+} */
 
 .mission {
     background-color: #7049dd;
-    margin-left: 5px;
+    width: auto;
+    /* margin-left: 5px;
     padding:30px;
     height: 250px;
-    width: 40%;
-    margin-bottom: 20px;
+    
+    margin-bottom: 20px; */
 }
 
 .vision-img {
     margin-top:10px;
-    background-image: url('https://www.voltas.in/images/_ansel_image_collector/About_Overview_Card_Vision.jpg');
-    background-size: 80% 95%;
-    background-repeat: no-repeat;
-    width:40%;
-    margin: 0 0 5px 20px;
-    padding: 20px;
+   background-color: rgb(64, 170, 170);
+    /* background-size: 80% 95%; */
+    /* background-repeat: no-repeat; */
+    /* width:40%; */
+    /* margin: 0 0 5px 20px;
+    padding: 20px; */
     color: darkmagenta;
 }
 
@@ -67,11 +68,10 @@
 /*subscribe section */
 .sub-heading{
     color: rgb(221 155 69);
-    margin-left: 205px;
 }
-.well{
+/* .well{
     padding: 20px;
-}
+} */
 .subscribe{
     margin: 65px 87px;
 }
