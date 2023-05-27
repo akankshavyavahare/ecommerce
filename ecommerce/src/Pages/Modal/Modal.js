@@ -28,7 +28,7 @@ const Modal = (props) => {
                 "UserPassword": password,
             }
             let res = await axios.post("http://onlinetestapi.gerasim.in/api/Ecomm/Login", obj)
-            if (res.data.message === "Login Successful") {
+            if (res.data.message === "Login Successful") { //it should be same as network in browser
                 localStorage.setItem("islogin", true);
                 localStorage.setItem("isuser", true);
                 localStorage.setItem("userobj", res.data.data);
@@ -61,7 +61,7 @@ const Modal = (props) => {
                                 <form onSubmit={(e) => SubmitHandler(e)}>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputUsername" className="form-label"> Mobile</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1" value={mobile} placeholder='username' onChange={(e) => setMobile(e.target.value)}></input>
+                                        <input type="text" className="form-control" id="exampleInputEmail1" value={mobile} placeholder='mobile' onChange={(e) => setMobile(e.target.value)}></input>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>

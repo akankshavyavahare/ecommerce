@@ -35,7 +35,7 @@ const Login = () => {
                 localStorage.setItem("userobj", res.data.data);
                 
             }
-            navigate('/home')
+            navigate('/')
             window.location.reload();// it is more to make changes or refresh all pages
             
         }

@@ -6,7 +6,7 @@ const Protected = (props) => {
     useEffect(()=>{
         let ls = localStorage.getItem("islogin");
         if(!ls){                   
-            navigate('/home')  // if not login then show login page 
+            navigate('/')  // if not login then show login page 
         }
     })
     return (

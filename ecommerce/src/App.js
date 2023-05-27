@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Pages/Navbar/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './Pages/Login/Login';
+// import Login from './Pages/Login/Login';
 import AddProduct from './Pages/Admin/AddProduct';
-import Allproduct from './Pages/Admin/Product';
+import Allproduct from './Pages/Admin/AllProduct';
 import Home from './Pages/Admin/Home';
 import Mobile from './Pages/Users/Mobile';
 import Laptop from './Pages/Users/Laptop';
@@ -36,7 +36,7 @@ const showmodalogin=()=>{
         <Routes>
         {/* <Route path='/' element={<Login/>}> </Route> */}
         <Route path='/signup' element={<Signup/>}></Route>
-          <Route path='/home' element={<Home/>}></Route>
+          <Route path='/' element={<Home/>}></Route>
           <Route path='addproduct' element={<Protected Component={<AddProduct/>}/>}> </Route>
           <Route path='/allproduct' element={<Protected Component={<Allproduct/>}/>}></Route>
           <Route path='/mobile' element={<Protected Component={<Mobile/>}/>}></Route>

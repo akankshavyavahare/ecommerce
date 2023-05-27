@@ -51,7 +51,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="navbar-nav mr-auto">
-                            <Link to='/home' className="nav-link"> <FontAwesomeIcon icon={faHome} /></Link>
+                            <Link to='/' className="nav-link"> <FontAwesomeIcon icon={faHome} /></Link>
                         </li>
                         {isadmin && <><li className="navbar-nav mr-auto">
                             <Link to='/addproduct' className="nav-link"> Add Product </Link>
