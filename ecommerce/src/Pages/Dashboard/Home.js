@@ -3,13 +3,13 @@ import { faCertificate, faHeart, faLeaf, faLock, faPowerOff, faWrench } from '@f
 import { faFacebook, faFacebookF, faFacebookSquare, faInstagramSquare, faLinkedin, faLinkedinIn, faSkype, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import React from 'react';
 import './Home.css';
-import { ABOUT,LOGO1 } from '../images';
+import { ABOUT,LOGO } from '../images';
 const Home = () => {
     return (
         <div>
             <section className="container-fluid block-1 p-5">
                 <div className='header'>
-                    <h1 className='heading '> <img src={LOGO1} alt='Logo' style={{ width: "176px", height: "90px" }}></img></h1>
+                    <h1 className='heading '> <img src={LOGO} alt='Logo' style={{ width: "176px", height: "90px" }}></img></h1>
                     <p className='para1'>Content writing for ecommerce sites is all about understanding the buyer.</p>
                 </div>
                 <div className='button'>

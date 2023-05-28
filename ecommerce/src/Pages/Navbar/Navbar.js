@@ -5,7 +5,7 @@ import { faCartShopping, faHome, faRightFromBracket, faUser } from '@fortawesome
 import './Navbar.css';
 import { Appcart } from '../../App';
 import Modal from '../Modal/Modal';
-import { LOGO1 } from '../images';
+import { LOGO } from '../images';
 const Navbar = () => {
     const{cartvalues, showmodalpop,showmodalogin} = useContext(Appcart); // acessing value from app.js, to show value 0.
     const [islogin, setisLogin] = useState(false); //this is used to hide logout button display it after login
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div>
             {showmodalpop && <Modal/>}
             <nav className="navbar navbar-expand-lg navbar nav1">
-                <a className="navbar-brand" href="#"><img src={LOGO1} alt='Logo' style={{ width: "176px", height: "60px" }}></img></a>
+                <a className="navbar-brand" href="#"><img src={LOGO} alt='Logo' style={{ width: "176px", height: "60px" }}></img></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
