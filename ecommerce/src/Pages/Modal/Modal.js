@@ -31,7 +31,7 @@ const Modal = (props) => {
             if (res.data.message === "Login Successful") { //it should be same as network in browser
                 localStorage.setItem("islogin", true);
                 localStorage.setItem("isuser", true);
-                localStorage.setItem("userobj", res.data.data);
+                localStorage.setItem("userobj", JSON.stringify(res.data.data));
                 window.location.reload();// it is more to make changes or refresh all pages
             }
             navigate('/home')

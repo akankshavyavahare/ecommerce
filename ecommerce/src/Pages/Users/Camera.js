@@ -27,7 +27,6 @@ const Camera = () => {
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productImageUrl}</p>
                                    
-                                    <Addcart/>
                                     <Addincrement/>
                                 </div>
                             </div>

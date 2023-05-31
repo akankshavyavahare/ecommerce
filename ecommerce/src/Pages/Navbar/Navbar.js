@@ -7,7 +7,7 @@ import { Appcart } from '../../App';
 import Modal from '../Modal/Modal';
 import { LOGO } from '../images';
 const Navbar = () => {
-    const{cartvalues, showmodalpop,showmodalogin} = useContext(Appcart); // acessing value from app.js, to show value 0.
+    const{showmodalpop,showmodalogin, cartarray} = useContext(Appcart); // acessing value from app.js, to show value 0.
     const [islogin, setisLogin] = useState(false); //this is used to hide logout button display it after login
     const [isuser, setIsuser] = useState(false);
     const [isadmin, setIsadmin] = useState(false);
@@ -75,7 +75,7 @@ const Navbar = () => {
                                 <Link to='/tablet' className="nav-link">Tablet</Link>
                             </li>
                             <li className="navbar-nav mr-auto">
-                                <Link to='/addcart' className="nav-link"><FontAwesomeIcon icon={faCartShopping} /><sup> {cartvalues}</sup></Link>
+                                <Link to='/cartdetail' className="nav-link"><FontAwesomeIcon icon={faCartShopping} /><sup> {cartarray.length}</sup></Link>
                             </li> {/* {cartvalues} to show 0 on navbar */}
                         </>}
 

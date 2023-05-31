@@ -10,7 +10,7 @@ const Home = () => {
             <section className="container-fluid block-1 p-5">
                 <div className='header'>
                     <h1 className='heading '> <img src={LOGO} alt='Logo' style={{ width: "176px", height: "90px" }}></img></h1>
-                    <p className='para1'>Content writing for ecommerce sites is all about understanding the buyer.</p>
+                    <p className='para1'>Electronics are universal in our daily lives, and have led to a deep connection with technology in most of the world. Computers, smartphones, even programmable kitchen appliances and much more have made life easier for billions of people, and play a central role in both work and entertainment. Electronics HUB is the proud host of numerous successful eCommerce websites selling electronics online. Below is a sample of some of our clients.</p>
                 </div>
                 <div className='button'>
                     <button className='btn btn-primary'> Shop Now </button>
@@ -23,7 +23,7 @@ const Home = () => {
                         <div>
                             <h2 className='text-center' id='about'>About Us</h2>
                             <h4 className='p-3'>Description</h4>
-                            <p className='para-main'>Provider of a shopping platform for home appliances. The company offers an online marketplace which enables users to buy home appliances at competitive rates with free installation services.</p>
+                            <p className='para-main'>Provider of a shopping platform for electronic appliances. The company offers an online marketplace which enables users to buy electronics appliances at competitive rates with free installation services.</p>
                             <button className="btn btn-primary">Get in Touch</button>
                         </div>
                     </div>

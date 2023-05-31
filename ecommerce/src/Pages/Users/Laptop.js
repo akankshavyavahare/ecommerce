@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Addcart from './Addcart';
+import Addincrement from '../IncDec/Addincrement';
 
 const Laptop = () => {
     const [islaptop, setIsLaptop] = useState([]);
@@ -26,7 +27,7 @@ const Laptop = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productDescription}</p>
-                                    <Addcart/>
+                                    <Addincrement/>
                                 </div>
                             </div>
                         </div>

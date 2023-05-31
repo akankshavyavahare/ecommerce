@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Addincrement from '../IncDec/Addincrement';
 import DeleteModal from '../Modal/DeleteModal';
 import Addcart from '../Users/Addcart';
 
@@ -7,12 +8,14 @@ const Allproduct = (props) => {
     const [isdevice, setIsdevice] = useState([]);
     const [showdelete, setShowdelete] = useState(false);
     const [showmodalpop, setShowmodalpop] = useState(false);
+    const[showcart , setShowcart] = useState(true)
     useEffect(() => {
         const allproductapi = async () => {
             let res = await axios.get("http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProducts");
             let ls = localStorage.getItem("isadmin");
             setIsdevice(res.data.data)
             setShowdelete(ls ? true : false)   // delete button to show 
+            setShowcart(ls ? false : true)
             console.log(ls)
         }
 
@@ -37,7 +40,7 @@ const Allproduct = (props) => {
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productImageUrl}</p>
                                     {showdelete && <button type='delete' className='btn btn-danger' onClick={(e) => deleteHandler(item)}> Delete </button>}
-                                    <Addcart />
+                                   {showcart && <Addincrement /> } 
                                 </div>
                             </div>
                         </div>

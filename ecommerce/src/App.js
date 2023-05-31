@@ -17,43 +17,53 @@ import Home from './Pages/Dashboard/Home';
 
 const Appcart = createContext(); //This is context api use to inherit properties from parent to n number of child
 function App() {
-const[cartvalues , setCartvalues] = useState(0);
-const[showmodalpop , setShowmodalpop] = useState(false)
-const increaseCart =()=>{
-  setCartvalues(cartvalues + 1)
-}
-const showmodalogin=()=>{
-  setShowmodalpop(
-          !showmodalpop
-  )
-}
+  const [cartvalues, setCartvalues] = useState(0);
+  const [showmodalpop, setShowmodalpop] = useState(false)
+  const [cartarray, setCartarray] = useState([])
+  const increaseCart = (product) => {
+      // setCartvalues(cartvalues + 1)
+    console.log(product);
+    let currentproduct = { ...product, qty: (cartvalues) };
+    console.log(currentproduct)
+    setCartvalues(0);
+    setCartarray([...cartarray, currentproduct])
+  }
+  const showmodalogin = () => {
+    setShowmodalpop(
+      !showmodalpop
+    )
+  }
+ 
+  const quantitys = (qtyVal) => {
+   setCartvalues(qtyVal);
+  }
   return (
-    <Appcart.Provider value={{cartvalues,showmodalpop, showmodalogin, increaseCart}}>  {/* then go to navbar .... 3rd step consumer */}
-    <div>
+    <Appcart.Provider value={{ cartvalues, showmodalpop, cartarray, quantitys, showmodalogin, increaseCart }}>  {/* then go to navbar .... 3rd step consumer */}
+      <div>
 
-      <BrowserRouter>
-        <Navbar></Navbar>
-        <Routes>
-        {/* <Route path='/' element={<Login/>}> </Route> */}
-        <Route path='/signup' element={<Signup/>}></Route>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='addproduct' element={<Protected Component={<AddProduct/>}/>}> </Route>
-          <Route path='/allproduct' element={<Protected Component={<Allproduct/>}/>}></Route>
-          <Route path='/mobile' element={<Protected Component={<Mobile/>}/>}></Route>
-          <Route path='/laptop' element={<Protected Component={<Laptop/>}/>}></Route>
-          <Route path='/camera' element={<Protected Component={<Camera/>}/>}></Route>
-          <Route path='/tablet' element={<Protected Component={<Tablet/>}/>}></Route>
-          <Route path='/addcart' element={<Protected Component={<Addcart/>}/>}></Route>
-          {/* <Route path='/mobile' element={<Mobile/>}> </Route>
+        <BrowserRouter>
+          <Navbar></Navbar>
+          <Routes>
+            {/* <Route path='/' element={<Login/>}> </Route> */}
+            <Route path='/signup' element={<Signup />}></Route>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='addproduct' element={<Protected Component={<AddProduct />} />}> </Route>
+            <Route path='/allproduct' element={<Protected Component={<Allproduct />} />}></Route>
+            <Route path='/mobile' element={<Protected Component={<Mobile />} />}></Route>
+            <Route path='/laptop' element={<Protected Component={<Laptop />} />}></Route>
+            <Route path='/camera' element={<Protected Component={<Camera />} />}></Route>
+            <Route path='/tablet' element={<Protected Component={<Tablet />} />}></Route>
+            <Route path='/cartdetail' element={<Protected Component={<Addcart />} />}></Route>
+            {/* <Route path='/mobile' element={<Mobile/>}> </Route>
           <Route path='/laptop' element={<Laptop/>}></Route>
           <Route path='/camera' element={<Camera/>}> </Route>
           <Route path='/tablet' element={<Tablet/>}></Route> */}
-        </Routes>
-      </BrowserRouter>
-    </div>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </Appcart.Provider>
   );
 }
 
 export default App;
-export{Appcart};
+export { Appcart };

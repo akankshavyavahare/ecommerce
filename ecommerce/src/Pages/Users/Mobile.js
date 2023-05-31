@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Addincrement from '../IncDec/Addincrement';
 import Addcart from './Addcart';
 
 const Mobile = () => {
@@ -24,7 +25,7 @@ const Mobile = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productDescription}</p>
-                                    <Addcart/>
+                                    <Addincrement itemdetail={item}/>
                                 </div>
                             </div>
                         </div>)
