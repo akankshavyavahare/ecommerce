@@ -3,22 +3,15 @@ import React, { useContext, useState } from 'react';
 import { Appcart } from '../../App';
 
 const Addcart = (props) => {
-    const { increaseCart, cartarray } = useContext(Appcart); // accessing from parent app.js through to context api
-
+    
+    const { increaseCart, cartarray, cartvalues, addingcart } = useContext(Appcart); // accessing from parent app.js through to context api
+    
     const addcartHandler = async () => {
-        increaseCart(props.itemdetail);
-        console.log(props.itemdetail);
-        let ls = localStorage.getItem("userobj")
-        console.log(ls);
-        // let obj ={
-        //     "CartId": "",
-        //     "CustId": "",
-        //     "ProductId": "",
-        //     "Quantity": "",
-        //     "AddedDate": Date(),
-        // }
-        // let res = await axios.post("http://onlinetestapi.gerasim.in/api/Ecomm/AddToCart",obj)
-        // console.log(res);
+        //  increaseCart(props.itemdetail);
+        //  console.log(props.itemdetail);
+         addingcart(props.itemdetail)
+
+        
     }
 
     return (

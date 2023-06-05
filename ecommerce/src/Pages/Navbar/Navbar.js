@@ -7,11 +7,11 @@ import { Appcart } from '../../App';
 import Modal from '../Modal/Modal';
 import { LOGO } from '../images';
 const Navbar = () => {
-    const{showmodalpop,showmodalogin, cartarray} = useContext(Appcart); // acessing value from app.js, to show value 0.
+    const{showmodalpop,showmodalogin, cartvalues, cartarray} = useContext(Appcart); // acessing value from app.js, to show value 0.
     const [islogin, setisLogin] = useState(false); //this is used to hide logout button display it after login
     const [isuser, setIsuser] = useState(false);
     const [isadmin, setIsadmin] = useState(false);
-    
+ 
     useEffect(() => {
         let ls = localStorage.getItem("islogin");
         let ls1 = localStorage.getItem("isadmin");

@@ -10,23 +10,27 @@ import Laptop from './Pages/Users/Laptop';
 import Camera from './Pages/Users/Camera';
 import Tablet from './Pages/Users/Tablet';
 import Protected from './Pages/Protected/Protected';
-import { Component, createContext, useState } from 'react';
+import { Component, createContext, useEffect, useState } from 'react';
 import Addcart from './Pages/Users/Addcart';
 import Signup from './Pages/Signup/Signup';
 import Home from './Pages/Dashboard/Home';
+import axios from 'axios';
 
 const Appcart = createContext(); //This is context api use to inherit properties from parent to n number of child
 function App() {
   const [cartvalues, setCartvalues] = useState(0);
   const [showmodalpop, setShowmodalpop] = useState(false)
   const [cartarray, setCartarray] = useState([])
+
   const increaseCart = (product) => {
-      // setCartvalues(cartvalues + 1)
-    console.log(product);
-    let currentproduct = { ...product, qty: (cartvalues) };
+
+    // setCartvalues(cartvalues + 1)
+    // console.log(product);
+    let currentproduct = { ...product, qty: (cartvalues + 1) };
     console.log(currentproduct)
     setCartvalues(0);
     setCartarray([...cartarray, currentproduct])
+
   }
   const showmodalogin = () => {
     setShowmodalpop(
@@ -34,11 +38,43 @@ function App() {
     )
   }
  
+  useEffect(() => {
+    const apiCall = async()=>{
+      let ls = JSON.parse(localStorage.getItem("userobj"));
+      let cartbyId = await axios.get("http://onlinetestapi.gerasim.in/api/Ecomm/GetCartProductsByCustomerId", { params: { id: ls.custId } })
+      setCartarray(cartbyId.data.data);
+    }
+    apiCall()
+  },[])
+ 
+  const addingcart = async (product) => {
+    console.log(product);
+    let ls = JSON.parse(localStorage.getItem("userobj"))
+    console.log(ls);
+    // debugger
+    let obj = {
+      "CustId": ls.custId,
+      "ProductId": product.productId,
+      "Quantity": cartvalues,
+      "AddedDate": new Date(),
+    }
+    console.log(obj);
+
+    let res = await axios.post("http://onlinetestapi.gerasim.in/api/Ecomm/AddToCart", obj)
+    // console.log(res);
+    if (res.data.message === "Product Quantity Updated in Cart") {
+      console.log(res.data.message);
+      setCartvalues(0);
+    }
+    let cartbyId = await axios.get("http://onlinetestapi.gerasim.in/api/Ecomm/GetCartProductsByCustomerId", { params: { id: ls.custId } })
+    console.log(cartbyId);
+    setCartarray(cartbyId.data.data);
+  }
   const quantitys = (qtyVal) => {
-   setCartvalues(qtyVal);
+    setCartvalues(qtyVal);
   }
   return (
-    <Appcart.Provider value={{ cartvalues, showmodalpop, cartarray, quantitys, showmodalogin, increaseCart }}>  {/* then go to navbar .... 3rd step consumer */}
+    <Appcart.Provider value={{ cartvalues, showmodalpop, cartarray, addingcart, quantitys, showmodalogin, increaseCart }}>  {/* then go to navbar .... 3rd step consumer */}
       <div>
 
         <BrowserRouter>

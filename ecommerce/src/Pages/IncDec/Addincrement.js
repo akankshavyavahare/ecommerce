@@ -7,16 +7,11 @@ const Addincrement = (props) => {
     const [num, setNum] = useState(0);
     const{quantitys} = useContext(Appcart)
     const incAddnum = () => {
-        // if(num>=0){
-        //     setNum(num+1);
-        // }
         setNum(num + 1);
-        quantitys(num+1);
+        quantitys(num+1);  /* it is for showing incresasing quantity of cart */
     }
     const decSubnum = () => {
-        // if(num>0){
-        //     setNum(num-1);
-        // }
+   
         setNum(num - 1);
         quantitys(num-1);
     }

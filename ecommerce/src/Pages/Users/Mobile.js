@@ -6,6 +6,7 @@ import Addcart from './Addcart';
 
 const Mobile = () => {
     const [ismobile, setIsMobile] = useState([]);
+    
     useEffect(() => {
         const callMobileApi = async () => {
             let res = await axios.get('http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProductsByCategoryId?id=1');

@@ -25,7 +25,7 @@ const Tablet = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productDescription}</p>
-                                    <Addincrement/>
+                                    <Addincrement itemdetail={item}/>
                                 </div>
                             </div>
 
