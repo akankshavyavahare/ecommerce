@@ -1,9 +1,14 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 const DeleteModal = (props) => {
-    const deletehandler = () => {
-
+    const [data, setData] = useState([]);
+  
+    const deletehandler = async () => {
+        {props.deletehandler()}
     }
+   
+   
     return (
         <div>
             <div>

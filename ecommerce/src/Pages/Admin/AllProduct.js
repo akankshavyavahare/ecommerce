@@ -8,7 +8,7 @@ const Allproduct = (props) => {
     const [isdevice, setIsdevice] = useState([]);
     const [showdelete, setShowdelete] = useState(false);
     const [showmodalpop, setShowmodalpop] = useState(false);
-    const[showcart , setShowcart] = useState(true)
+    const [showcart, setShowcart] = useState(true)
     useEffect(() => {
         const allproductapi = async () => {
             let res = await axios.get("http://onlinetestapi.gerasim.in/api/Ecomm/GetAllProducts");
@@ -18,15 +18,21 @@ const Allproduct = (props) => {
             setShowcart(ls ? false : true)
             console.log(ls)
         }
-
+        const deleteModal = async () => {
+            let rs = await axios.get("http://onlinetestapi.gerasim.in/api/Ecomm/DeleteProductById")
+        }
         allproductapi();
+        deleteModal();
     }, [])
-    
+
     const deleteHandler = async (item) => {
         console.log(item);
-        setShowmodalpop(true);
+        let rs = await axios.get("http://onlinetestapi.gerasim.in/api/Ecomm/DeleteProductById", { params: { id: item.productId } })
+        console.log(rs);
+        // setShowmodalpop(true);
+        window.location.reload();
     }
-    
+
     return (
 
         <div className='container'>
@@ -40,7 +46,7 @@ const Allproduct = (props) => {
                                     <h5 className="card-title">{item.productName}</h5>
                                     <p className="card-text">{item.productImageUrl}</p>
                                     {showdelete && <button type='delete' className='btn btn-danger' onClick={(e) => deleteHandler(item)}> Delete </button>}
-                                   {showcart && <Addincrement /> } 
+                                    {showcart && <Addincrement />}
                                 </div>
                             </div>
                         </div>
