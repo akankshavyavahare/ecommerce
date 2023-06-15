@@ -13,7 +13,7 @@ const Home = () => {
                     <p className='para1'>Electronics are universal in our daily lives, and have led to a deep connection with technology in most of the world. Computers, smartphones, even programmable kitchen appliances and much more have made life easier for billions of people, and play a central role in both work and entertainment. Electronics HUB is the proud host of numerous successful eCommerce websites selling electronics online. Below is a sample of some of our clients.</p>
                 </div>
                 <div className='button'>
-                    <button className='btn btn-primary'> Shop Now </button>
+                    <button className='btn btn-primary'> Explore </button>
                 </div>
             </section>
             {/* about us  */}
@@ -65,34 +65,34 @@ const Home = () => {
                         <div className="col-sm-4 ">
                             <span>  <FontAwesomeIcon icon={faPowerOff} /></span>
                             <h4>POWER</h4>
-                            <p>Lorem ipsum dolor sit amet..</p>
+                            <p>India, Germany , United Kingdom</p>
                         </div>
                         <div className="col-sm-4">
                             <span>  <FontAwesomeIcon icon={faHeart} /></span>
                             <h4>LOVE</h4>
-                            <p>Lorem ipsum dolor sit amet..</p>
+                            <p> Always recommended to buy electronics from us</p>
                         </div>
                         <div className="col-sm-4">
                             <span>  <FontAwesomeIcon icon={faLock} /></span>
                             <h4>JOB DONE</h4>
-                            <p>Lorem ipsum dolor sit amet..</p>
+                            <p>All the product is deliver on time</p>
                         </div>
                     </div>
                     <div className="row py-3">
                         <div className="col-sm-4">
                             <span>  <FontAwesomeIcon icon={faLeaf} /></span>
                             <h4>GREEN</h4>
-                            <p>Lorem ipsum dolor sit amet..</p>
+                            <p>Everything is eco-friendly</p>
                         </div>
                         <div className="col-sm-4">
                             <span>  <FontAwesomeIcon icon={faCertificate} /></span>
                             <h4>CERTIFIED</h4>
-                            <p>Lorem ipsum dolor sit amet..</p>
+                            <p>SSL Certificate</p>
                         </div>
                         <div className="col-sm-4">
                             <span>  <FontAwesomeIcon icon={faWrench} /></span>
                             <h4>HARD WORK</h4>
-                            <p>Lorem ipsum dolor sit amet..</p>
+                            <p> Connected with 14,000 sponser</p>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ const Home = () => {
                 <div className="container-fluid subscribe">
                     <h2 className="sub-heading text-center"> Subscribe To the Electronic Shop Fot Latest upload</h2>
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-6 offset-3">
                             <div className="well justify-content-center">
                                 <form>
                                     <div className="input-group">
